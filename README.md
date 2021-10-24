@@ -1,5 +1,7 @@
 # PYTHON-PHP-MYSQL-CRUD
  Pequeño ejemplo de aplicación web PYTHON-MYSQL-PHP
+ 
+ 
 1.- Debemos crear una carpeta donde alojaremos nuestro proyecto
 2.- Una vez creado debemos cersioararnos de haber instalado python y que haya sido añadido a nuestra variable de entorno path
 3.- Para comprobarlo utilizamos el comando path
