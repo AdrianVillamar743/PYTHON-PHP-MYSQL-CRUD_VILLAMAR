@@ -3,17 +3,25 @@
  
  
 1.- Debemos crear una carpeta donde alojaremos nuestro proyecto
+
 2.- Una vez creado debemos cersioararnos de haber instalado python y que haya sido añadido a nuestra variable de entorno path
+
 3.- Para comprobarlo utilizamos el comando path
+
 4.- Si nos devuelve la versión de python instalada nos dirigimos a la carpeta del proyecto y luego ejecutaremos el siguiente comando dentro de la terminal
 pip install flask
+
 5.- Una vez instalado verificamos que esté añadido en la lista de paquetes con el comando pip list
+
 6.- En nuestro caso necesitaremos que la aplicación se conecte con MySQL, así que debemos instalar el paquete de comunicaciones con el siguiente comando.
 pip install Flask-MySQL
+
 7.- Debemos instalar el template de acceso a html con el comando 
 pip install jinja2
+
 8.- Luego de haber instalado todo en nuestra carpeta del proyecto.
 Crearemos dos carpetar nuevas una llamada templates, dentro de ella otra llamada empleados y dentro de empleados un archivo llamado index.html
+
 9.- Dentro del mismo ejecutamos el siguiente codigo
 
 from flask import  Flask 
