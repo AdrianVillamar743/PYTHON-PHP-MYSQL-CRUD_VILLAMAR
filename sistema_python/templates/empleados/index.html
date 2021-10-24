@@ -1,0 +1,36 @@
+{% include 'header.html' %}
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>CORREO</th>
+                            <th>FOTO</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for empleado in empleados  %}
+                        <tr>
+                            <td>{{empleado[0]}}</td>
+                            <td>{{empleado[1]}}</td>
+                            <td>{{empleado[2]}}</td>
+                            <td>
+                                <img class ="img-thumbnail" width="100" src="uploads/{{empleado[3]}}" alt="">
+                                </td>
+                            <td>
+                                <a class="btn btn-warning" href="/edit/{{empleado[0]}}" >Editar</a>
+                                <a onclick="return confirm('¿Desea borrar al empleado?')"class="btn btn-danger" href="/destroy/{{empleado[0]}}" >Eliminar</a>
+                                </td>
+                       </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
+ 
+{% include 'footer.html' %}

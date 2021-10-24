@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+{% for empleado in empleados  %}
+ 
+  
+
+<form method="POST" action="/update" enctype="multipart/form-data">
+   <div class="card">
+       <div class="card-header">
+           Header
+       </div>
+       <div class="card-body">
+        <div class='form-group'>
+            Id:
+            <input class="form-control" readOnly type="text" name='txtID' value="{{empleado[0]}}" id='txtID'>    
+        </div>
+      
+        <div class='form-group'>
+            Nombre:
+            <input  class="form-control" type="text" name='txtNombre' value="{{empleado[1]}}" id='txtNombre'>    
+        </div>
+       
+        <div class='form-group'>
+        Correo:
+        <input  class="form-control" type="text" name="txtCorreo" value=" {{empleado[2]}}" id="txtCorreo">
+    </div>
+
+    <div align='center' class='form-group'>
+
+       
+        Imagen:
+        <img class ="img-thumbnail" width="100" src="{{ url_for('uploads',nombreFoto=empleado[3])}}" alt="">
+        
+    </div>
+
+    <div class='form-group'>
+        <input class="form-control" type="file" name="txtFoto"  id="txtFoto">
+    </div>
+
+    <div  align='center' class='form-group'>
+    
+        <input class="btn btn-success" type="submit" value="Modificar">
+        <a href="{{url_for('index')}}" class="btn btn-primary">Regresar</a>
+    </div>
+       </div>
+   </div>
+  
+</form>
+{% endfor %}
+
+{% include 'footer.html' %}
